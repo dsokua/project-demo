@@ -21,7 +21,7 @@ public class PremiumCalculatorController {
 	@Autowired
 	private PremiumCalculationService premiumCalculationService;
 
-	@GetMapping(value="/main")
+	@GetMapping(value= {"/main", "/"})
 	public String displayMain(Model model) {
 		initParamters(model);
 		model.addAttribute("premiumRequest", new PremiumRequest());		

@@ -11,5 +11,8 @@
 	<h1>Healthcare Premium quotation:</h1>
 	<p>${premium.rate} ${premium.paymentType} payments</p>
 	
+				<P><a href="<c:url value="main" />">Back</a></P>
+	
+	
 </body>
 </html>
