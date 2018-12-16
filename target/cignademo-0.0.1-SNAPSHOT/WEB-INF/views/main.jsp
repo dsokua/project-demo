@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Main</title>
+<title>Insert title here</title>
     <style>
     .error
     {

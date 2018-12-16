@@ -7,6 +7,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.donardsokua.cignademo.model.Premium;
 import com.donardsokua.cignademo.model.PremiumRequest;
@@ -14,14 +15,16 @@ import com.donardsokua.cignademo.service.PremiumCalculationService;
 import com.donardsokua.cignademo.service.PremiumParameterService;
 
 @Controller
+@RequestMapping("/web")
 public class PremiumCalculatorController {
 
 	@Autowired
 	private PremiumParameterService premiumParameterService;
+
 	@Autowired
 	private PremiumCalculationService premiumCalculationService;
 
-	@GetMapping(value= {"/main", "/"})
+	@GetMapping(value= {"/main"})
 	public String displayMain(Model model) {
 		initParamters(model);
 		model.addAttribute("premiumRequest", new PremiumRequest());		
